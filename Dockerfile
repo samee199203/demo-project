@@ -7,7 +7,7 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page274/br
 WORKDIR /var/www/html/
 RUN unzip branding.zip
 RUN cp -rvf branding/* .
-RUN rm -rf _MACOSX branding branding.zip
+RUN rm -rf branding branding.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
 
