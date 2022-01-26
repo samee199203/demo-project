@@ -3,11 +3,11 @@ MAINTAINER samee.shaikhsamee50@gmail.com
 RUN yum install -y httpd \
    zip \
   unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page274/zombiz.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page273/corso.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip zombiz.zip
-RUN cp -rvf zombiz-master/* .
-RUN rm -rf zombiz-master zombiz.zip
+RUN unzip corso.zip
+RUN cp -rvf documentation/* .
+RUN rm -rf documentation corso.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
 
