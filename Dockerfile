@@ -3,11 +3,11 @@ MAINTAINER samee.shaikhsamee50@gmail.com
 RUN yum install -y httpd \
    zip \
   unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page274/branding.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page274/zombiz.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip branding.zip
-RUN cp -rvf branding/* .
-RUN rm -rf branding branding.zip
+RUN unzip zombiz.zip
+RUN cp -rvf zombiz-master/* .
+RUN rm -rf zombiz-master zombiz.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
 
